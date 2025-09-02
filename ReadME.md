@@ -3,11 +3,14 @@
 
 # Data Pipeline Using Databricks Delta Live Tables (DLT)
 
-This project implements a Slowly Changing Dimension Type 2 (SCD2) data pipeline using **Databricks Delta Live Tables (DLT)**. It simulates transactional data ingestion from Postgres into a Bronze Delta table and orchestrates transformations through Silver and Gold layers to support business intelligence and advanced analytics.
+This project implements a data pipeline using **Databricks Delta Live Tables (DLT)**. It simulates transactional data, from an imaginary HR application, ingesting from Postgres into a DataBricks mount which trigges a Job to ingest the file by Spark Stream in a Delta table (the Bronze) and orchestrates transformations using DLT through Silver and Gold layers to support business intelligence and advanced analytics.
 
 ----------
 
 ## Architecture Overview
+
+<img width="755" height="539" alt="DataBricks-DLT drawio" src="https://github.com/user-attachments/assets/34c087df-0c3f-46eb-aa9a-f0f39f749aba" />
+
 
 The pipeline follows a **Medallion Architecture** with three core layers:
 
